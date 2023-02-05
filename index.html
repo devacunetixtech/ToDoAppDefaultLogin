@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap-5.2.1-dist/css/bootstrap.css">
+</head>
+<body style="background-color: darkcyan;">
+    <div class="mt-5 my-5">
+        <marquee behavior="" direction="left" style="font: 40px Roboto,sans-serif;color: black;" class="mt-5"><b>Proceed to Login as Administrator....</b></marquee>
+        <marquee behavior="" direction="right" style="font: 20px Roboto,sans-serif;color: black;">note:login with default username and password ......</marquee>
+    </div>
+    <div align="center" class="container-fluid">
+        <div class="row">
+            <div class="col-10 mx-auto">
+                <input type="text" id="adminname" class="form-control mb-3" placeholder="Input your name" style="width: 55vw;height: 8vh;font: 17px Roboto,sana-serif;">
+                <input type="email" id="userName" class="form-control" placeholder="Input username @.com" style="width: 55vw;height: 8vh;font: 17px Roboto,sana-serif;">
+                <input type="password" id="userPassword" class="form-control mt-3" placeholder="enter password" style="width: 55vw;height: 8vh;font: 17px Roboto,sana-serif;">
+                <div id="warningInfo" style="font: 27px Roboto,sana-serif;"></div>
+                <button onclick="adminLogin()" class="btn btn-success my-5" style="width: 35vw;height: 8vh; font: 25px Roboto,sans-serif;">LOGIN</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var defUsername = "acunetixtechie"
+        var defPassword = "acunetix"
+        function adminLogin() {
+            if (userName.value ==defUsername && userPassword.value == defPassword) {
+                alert("Hello "+ adminname.value +" you have successfully logged in on " + Date())
+                location.replace("newTodoPro.html")
+            } else {
+                warningInfo.innerHTML ="incorrect username or password&#128520;"
+                warningInfo.style.color = "red"  
+            }
+            userName.value =""
+            userPassword.value =""
+        }
+    </script>
+</body>
+</html>
+$ git remote add origin https://github.com/devacunetixtech/ToDoProApp.git
